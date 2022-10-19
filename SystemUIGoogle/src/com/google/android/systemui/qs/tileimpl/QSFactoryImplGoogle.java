@@ -51,6 +51,7 @@ import com.android.systemui.qs.tiles.ReduceBrightColorsTile;
 import com.android.systemui.qs.tiles.ReadingModeTile;
 import com.android.systemui.qs.tiles.RotationLockTile;
 import com.android.systemui.qs.tiles.ScreenRecordTile;
+import com.android.systemui.qs.tiles.SyncTile;
 import com.android.systemui.qs.tiles.UiModeNightTile;
 import com.android.systemui.qs.tiles.UsbTetherTile;
 import com.android.systemui.qs.tiles.WifiTile;
@@ -111,6 +112,7 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
             Provider<ReadingModeTile> readingModeTileProvider,
             Provider<AntiFlickerTile> antiFlickerTileProvider,
             Provider<HeadsUpTile> headsUpTileProvider,
+            Provider<SyncTile> syncTileProvider,
             Provider<ReverseChargingTile> reverseChargingTileProvider) {
         super(qsHostLazy,
                 customTileBuilderProvider,
@@ -149,7 +151,8 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
                 liveDisplayTileProvider,
                 readingModeTileProvider,
                 antiFlickerTileProvider,
-                headsUpTileProvider);
+                headsUpTileProvider,
+                syncTileProvider);
         mReverseChargingTileProvider = reverseChargingTileProvider;
         mBatterySaverTileGoogleProvider = batterySaverTileGoogleProvider;
     }
