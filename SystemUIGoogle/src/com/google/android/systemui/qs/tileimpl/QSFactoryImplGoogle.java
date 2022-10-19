@@ -24,6 +24,7 @@ import com.android.systemui.qs.tileimpl.QSFactoryImpl;
 import com.android.systemui.qs.tileimpl.QSTileImpl;
 import com.android.systemui.qs.tiles.AirplaneModeTile;
 import com.android.systemui.qs.tiles.AlarmTile;
+import com.android.systemui.qs.tiles.AmbientDisplayTile;
 import com.android.systemui.qs.tiles.AntiFlickerTile;
 import com.android.systemui.qs.tiles.BluetoothTile;
 import com.android.systemui.qs.tiles.CameraToggleTile;
@@ -113,6 +114,7 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
             Provider<AntiFlickerTile> antiFlickerTileProvider,
             Provider<HeadsUpTile> headsUpTileProvider,
             Provider<SyncTile> syncTileProvider,
+            Provider<AmbientDisplayTile> ambientDisplayTileProvider,
             Provider<ReverseChargingTile> reverseChargingTileProvider) {
         super(qsHostLazy,
                 customTileBuilderProvider,
@@ -152,7 +154,8 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
                 readingModeTileProvider,
                 antiFlickerTileProvider,
                 headsUpTileProvider,
-                syncTileProvider);
+                syncTileProvider,
+                ambientDisplayTileProvider);
         mReverseChargingTileProvider = reverseChargingTileProvider;
         mBatterySaverTileGoogleProvider = batterySaverTileGoogleProvider;
     }
